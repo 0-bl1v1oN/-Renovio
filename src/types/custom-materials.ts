@@ -1,0 +1,12 @@
+export type CustomCalculationType='AREA_PACKAGE'|'LIQUID_COVERAGE'|'LINEAR'|'PIECE'|'DRY_MIX'|'VOLUME';
+export type SurfaceTarget='floor'|'walls'|'ceiling'|'custom';
+export interface AreaPackageSettings{surface:SurfaceTarget;customArea:number;coveragePerPackage:number;packagePrice:number;wastePercent:number;unitName:string}
+export interface LiquidCoverageSettings{surface:SurfaceTarget;customArea:number;consumptionPerSquareMeter:number;coats:number;containerVolume:number;containerPrice:number;wastePercent:number;unitName:string}
+export interface LinearSettings{base:'perimeter'|'workingPerimeter'|'custom';customLength:number;unitLength:number;unitPrice:number;wastePercent:number;unitName:string}
+export interface PieceSettings{quantity:number;piecesPerPackage:number;packagePrice:number;wastePercent:number;unitName:string}
+export interface DryMixSettings{surface:SurfaceTarget;customArea:number;consumptionKgPerSquareMeter:number;baseThickness:number;actualThickness:number;bagWeight:number;bagPrice:number;wastePercent:number;unitName:string}
+export interface VolumeSettings{length:number;width:number;thickness:number;volumePerUnit:number;unitPrice:number;wastePercent:number;unitName:string}
+export type CustomMaterialSettings=AreaPackageSettings|LiquidCoverageSettings|LinearSettings|PieceSettings|DryMixSettings|VolumeSettings;
+export interface CustomMaterialTemplate{id:string;name:string;manufacturer?:string;note?:string;calculationType:CustomCalculationType;defaultSettings:CustomMaterialSettings;createdAt:string;updatedAt:string}
+export interface CustomMaterialInstance{id:string;templateId?:string;name:string;manufacturer?:string;note?:string;calculationType:CustomCalculationType;settings:CustomMaterialSettings}
+export interface CustomMaterialResult{id:string;name:string;calculationType:CustomCalculationType;surface:string;quantity:number;unit:string;requirement:string;waste:number;unitPrice:number;cost:number}
