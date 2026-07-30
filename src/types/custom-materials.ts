@@ -8,5 +8,5 @@ export interface DryMixSettings{surface:SurfaceTarget;customArea:number;consumpt
 export interface VolumeSettings{length:number;width:number;thickness:number;volumePerUnit:number;unitPrice:number;wastePercent:number;unitName:string}
 export type CustomMaterialSettings=AreaPackageSettings|LiquidCoverageSettings|LinearSettings|PieceSettings|DryMixSettings|VolumeSettings;
 export interface CustomMaterialTemplate{id:string;name:string;manufacturer?:string;note?:string;calculationType:CustomCalculationType;defaultSettings:CustomMaterialSettings;createdAt:string;updatedAt:string}
-export interface CustomMaterialInstance{id:string;templateId?:string;name:string;manufacturer?:string;note?:string;calculationType:CustomCalculationType;settings:CustomMaterialSettings}
+export interface CustomMaterialInstance{id:string;sourceTemplateId:string;name:string;manufacturer?:string;note?:string;calculationType:CustomCalculationType;settings:CustomMaterialSettings}
 export interface CustomMaterialResult{id:string;name:string;calculationType:CustomCalculationType;surface:string;quantity:number;unit:string;requirement:string;waste:number;unitPrice:number;cost:number}
