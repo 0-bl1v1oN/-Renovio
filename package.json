@@ -7,22 +7,23 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "framer-motion": "latest",
-    "lucide-react": "latest"
+    "typescript": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
     "@eslint/js": "latest",
+    "@tauri-apps/cli": "^2.11.4",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "eslint": "latest",
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-refresh": "latest",
     "globals": "latest",
-    "typescript-eslint": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "typescript-eslint": "latest"
   },
   "type": "module"
 }
